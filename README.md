@@ -69,16 +69,16 @@ brew install curl jq
 ### Method 1: Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/waf-penetration-testing-suite.git
-cd waf-penetration-testing-suite
-chmod +x waf_penetration_test.sh
+git clone https://github.com/e-api/waf-pen-test.git
+cd waf-pen-test
+chmod +x waf-pen-test.sh
 ```
 
 ### Method 2: Direct Download
 
 ```bash
-wget https://raw.githubusercontent.com/yourusername/waf-penetration-testing-suite/main/waf_penetration_test.sh
-chmod +x waf_penetration_test.sh
+wget https://raw.githubusercontent.com/e-api/waf-pen-test/main/waf-pen-test.sh
+chmod +x waf-pen-test.sh
 ```
 
 ## 🎯 Quick Start
@@ -87,13 +87,13 @@ chmod +x waf_penetration_test.sh
 
 ```bash
 # Test a domain with default settings
-./waf_penetration_test.sh https://your-website.com
+./waf-pen-test.sh https://your-website.com
 
 # Test with custom domain and save results
-./waf_penetration_test.sh https://api.your-app.com
+./waf-pen-test.sh https://api.your-app.com
 
 # Test local development environment
-./waf_penetration_test.sh http://localhost:8000
+./waf-pen-test.sh http://localhost:8000
 ```
 
 ### Example Output
@@ -222,20 +222,20 @@ waf_test_results_20240115_103045/
 
 ```bash
 # Test API endpoint
-./waf_penetration_test.sh https://api.example.com/v1
+./waf-pen-test.sh https://api.example.com/v1
 
 # Test login page specifically
-./waf_penetration_test.sh https://example.com/login
+./waf-pen-test.sh https://example.com/login
 
 # Test with custom port
-./waf_penetration_test.sh https://example.com:8443
+./waf-pen-test.sh https://example.com:8443
 ```
 
 ### Integration with Burp Suite
 
 ```bash
 # Proxy through Burp Suite for deeper analysis
-./waf_penetration_test.sh https://target.com --proxy http://127.0.0.1:8080
+./waf-pen-test.sh https://target.com --proxy http://127.0.0.1:8080
 ```
 
 ### Automation with CI/CD
@@ -251,8 +251,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run WAF Penetration Test
         run: |
-          chmod +x waf_penetration_test.sh
-          ./waf_penetration_test.sh https://staging.example.com
+          chmod +x waf-pen-test.sh
+          ./waf-pen-test.sh https://staging.example.com
 ```
 
 ### Scheduled Testing with Cron
@@ -260,7 +260,7 @@ jobs:
 ```bash
 # Run weekly security scans
 # Add to crontab (crontab -e)
-0 2 * * 0 /path/to/waf_penetration_test.sh https://example.com >> /var/log/waf_scan.log
+0 2 * * 0 /path/to/waf-pen-test.sh https://example.com >> /var/log/waf_scan.log
 ```
 
 ## 📈 Interpreting WAF Effectiveness
@@ -297,7 +297,7 @@ sudo yum install jq -y      # CentOS/RHEL
 **Issue**: Permission denied when running script
 ```bash
 # Solution: Make script executable
-chmod +x waf_penetration_test.sh
+chmod +x waf-pen-test.sh
 ```
 
 **Issue**: Connection timeout errors
@@ -377,5 +377,5 @@ The authors assume no liability for misuse of this tool. Always ensure you have 
 
 **Made with ❤️ for the security community**
 
-[Report Bug](https://github.com/yourusername/waf-penetration-testing-suite/issues) · [Request Feature](https://github.com/yourusername/waf-penetration-testing-suite/issues) · [Documentation](https://github.com/yourusername/waf-penetration-testing-suite/wiki)
+[Report Bug](https://github.com/e-api/waf-pen-test/issues) · [Request Feature](https://github.com/e-api/waf-pen-test/issues) · [Documentation](https://github.com/e-api/waf-pen-test/README.md)
 ```
