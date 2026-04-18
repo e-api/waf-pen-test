@@ -6,7 +6,7 @@
 
 # Configuration
 DOMAIN="${1:-http://your-domain.com}"
-LOG_FILE="waf_penetration_test_$(date +%Y%m%d_%H%M%S).log"
+LOG_FILE="waf_pen_test_$(date +%Y%m%d_%H%M%S).log"
 COLOR_RED='\033[0;31m'
 COLOR_GREEN='\033[0;32m'
 COLOR_YELLOW='\033[1;33m'
